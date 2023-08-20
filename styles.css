@@ -48,33 +48,39 @@ li a:hover:not(.active){
   }
 
 
-  li a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-
   .main {
 
     margin-left:15%;
     padding:1px 16px;
     height:1000px;
   }
-
+/* 
   .sidenav{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
-    width: 15%;
+
+
     height:100%;
-    position: fixed; /* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    position: fixed; 
+    overflow: auto;
   
+  } */
+
+  .sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    padding-top: 20px;
   }
 
-  .dropdown_btn {
-    padding: 6px 8px 6px 16px;
+  .sidenav a, .dropdown-btn {
+    padding: 6px 6px 6px 6px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
@@ -82,16 +88,31 @@ li a:hover:not(.active){
     border: none;
     background: none;
     width: 100%;
-    text-align: left;
     cursor: pointer;
     outline: none;
+    text-align: center; 
+    color: #000
+  }
 
+  .sidenav a.active {
+    background-color: #04AA6D;
+    color: white;
   }
 
 
+  .dropdown-container a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .sidenav a:hover:not(.active){
+    background-color: #555;
+    color: white;
+  }
+
   .dropdown-container {
     display: none;
-    background-color: #262626;
+    background-color: #d1caca;
     padding-left: 8px;
   }
 
